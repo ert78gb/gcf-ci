@@ -13,6 +13,4 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh
     && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" \
     && nvm install 6.11.2
 
-COPY .bash_profile /home/node
-
 ENTRYPOINT ["/bin/bash"]
