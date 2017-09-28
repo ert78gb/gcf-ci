@@ -7,6 +7,6 @@ script:
   - docker build -t kissrobert/gcf-ci .
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker login -e="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push kissrobert/gcf-ci;
     fi
